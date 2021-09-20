@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  OnTheMap
-//
-//  Created by Ksionek, Karol on 17/09/2021.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

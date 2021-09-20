@@ -1,17 +1,11 @@
-//
-//  AppDelegate.swift
-//  OnTheMap
-//
-//  Created by Ksionek, Karol on 17/09/2021.
-//
-
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    let udacityNetworkHelper = UdacityNetworkHelper()
+    var studentLocations: [StudentInformation] = []
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
