@@ -16,9 +16,7 @@ class InfoPostingViewController : UIViewController {
     }
     
     @IBAction func cancelAction(_ sender: Any) {
-        dismiss(animated: true) {
-            // no work to be done
-        }
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func submitAction(_ sender: Any) {
@@ -31,7 +29,8 @@ class InfoPostingViewController : UIViewController {
         progressIndicator.startAnimating()
         CLGeocoder().geocodeAddressString(locationText.text!) { (placemarks, error) in
             let geocodedResult = placemarks?[0]
-            if (placemarks?.isEmpty ?? false) {
+            if (error != nil || placemarks?.isEmpty ?? true) {
+                self.progressIndicator.isHidden = true
                 self.showToast(message: "Sorry, Bad location")
                 return
             }

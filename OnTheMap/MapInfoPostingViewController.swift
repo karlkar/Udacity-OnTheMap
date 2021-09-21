@@ -41,8 +41,9 @@ class MapInfoPostingViewController: UIViewController, MKMapViewDelegate {
     @IBAction func finishAction(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.udacityNetworkHelper.getProfileData { (success, userData) in
-            if (!success) {
+            if !success {
                 print("Sorry, I failed to get the profile data...")
+                self.showToast(message: "Oh man! I failed to get your profile data. Bad, bad me :/")
                 return
             }
             
@@ -54,12 +55,10 @@ class MapInfoPostingViewController: UIViewController, MKMapViewDelegate {
                 mediaUrl: self.link!,
                 latitude: self.placemark!.location!.coordinate.latitude,
                 longitude: self.placemark!.location!.coordinate.longitude) { (success) in
-                if (success) {
+                if success {
                     print("Success!")
                     
-                    self.dismiss(animated: true) {
-                        // nothing to do!
-                    }
+                    self.dismiss(animated: true, completion: nil)
                 } else {
                     self.showToast(message: "Oh man! Posting failed :/")
                     print("Failure!")

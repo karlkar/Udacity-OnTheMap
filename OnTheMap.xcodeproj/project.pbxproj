@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6503279526F8AD44009A6BE7 /* UdacityUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6503279426F8AD44009A6BE7 /* UdacityUserData.swift */; };
+		65AC6B8926F9BE45009841BF /* SingletonIsAnAntiPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AC6B8826F9BE45009841BF /* SingletonIsAnAntiPattern.swift */; };
 		65B7EF3E26F53FE700451D31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B7EF3D26F53FE700451D31 /* AppDelegate.swift */; };
 		65B7EF4026F53FE700451D31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B7EF3F26F53FE700451D31 /* SceneDelegate.swift */; };
 		65B7EF4226F53FE700451D31 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B7EF4126F53FE700451D31 /* LoginViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		6503279426F8AD44009A6BE7 /* UdacityUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityUserData.swift; sourceTree = "<group>"; };
+		65AC6B8826F9BE45009841BF /* SingletonIsAnAntiPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonIsAnAntiPattern.swift; sourceTree = "<group>"; };
 		65B7EF3A26F53FE700451D31 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B7EF3D26F53FE700451D31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65B7EF3F26F53FE700451D31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				65B7EF6726F54DC100451D31 /* UdacityNetworkHelper.swift */,
 				65B7EF6A26F6932700451D31 /* TabBarViewController.swift */,
 				65B7EF7C26F8940500451D31 /* MapInfoPostingViewController.swift */,
+				65AC6B8826F9BE45009841BF /* SingletonIsAnAntiPattern.swift */,
 			);
 			path = OnTheMap;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				65B7EF7D26F8940500451D31 /* MapInfoPostingViewController.swift in Sources */,
 				65B7EF3E26F53FE700451D31 /* AppDelegate.swift in Sources */,
 				65B7EF6826F54DC100451D31 /* UdacityNetworkHelper.swift in Sources */,
+				65AC6B8926F9BE45009841BF /* SingletonIsAnAntiPattern.swift in Sources */,
 				65B7EF4026F53FE700451D31 /* SceneDelegate.swift in Sources */,
 				65B7EF6226F5475E00451D31 /* InfoPostingViewController.swift in Sources */,
 				65B7EF5F26F5468100451D31 /* TableViewController.swift in Sources */,

@@ -56,11 +56,10 @@ class MapViewController : UIViewController, MKMapViewDelegate, LocationUpdateLis
     
     func onLocationsUpdated() {
         print("Locations updated!")
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         var annotations = [MKPointAnnotation]()
         
-        for location in appDelegate.studentLocations {
+        for location in StudentRepository.sharedInstance.studentLocations {
             let coordinate = CLLocationCoordinate2D(latitude:  CLLocationDegrees(location.latitude), longitude:  CLLocationDegrees(location.longitude))
             
             let annotation = MKPointAnnotation()

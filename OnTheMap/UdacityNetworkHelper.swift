@@ -191,7 +191,7 @@ class UdacityNetworkHelper {
     }
     
     func getStudentLocations(resultHandler: @escaping (_ success: Bool, _ data: [StudentInformation]?) -> ()) {
-        let request = URLRequest(url: URL(string: "https://onthemap-api.udacity.com/v1/StudentLocation?order=-updatedAt")!)
+        let request = URLRequest(url: URL(string: "https://onthemap-api.udacity.com/v1/StudentLocation?order=-updatedAt&limit=100")!)
         let session = URLSession.shared
         let task = session.dataTask(with: request) { data, response, error in
             if error != nil { // Handle error...

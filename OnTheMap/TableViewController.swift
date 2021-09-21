@@ -13,13 +13,11 @@ class TableViewController: UITableViewController, LocationUpdateListener {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.studentLocations.count
+        return StudentRepository.sharedInstance.studentLocations.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let studentLocation = appDelegate.studentLocations[indexPath.row]
+        let studentLocation = StudentRepository.sharedInstance.studentLocations[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentLocationCell")
         cell?.textLabel?.text = studentLocation.firstName + " " + studentLocation.lastName
         cell?.detailTextLabel?.text = studentLocation.mediaUrl
@@ -29,8 +27,7 @@ class TableViewController: UITableViewController, LocationUpdateListener {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let studentLocation = appDelegate.studentLocations[indexPath.row]
+        let studentLocation = StudentRepository.sharedInstance.studentLocations[indexPath.row]
         var annotationSubtitle = studentLocation.mediaUrl
         if !annotationSubtitle.hasPrefix("http") {
             annotationSubtitle = "http://" + annotationSubtitle

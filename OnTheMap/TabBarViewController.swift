@@ -5,7 +5,7 @@ class TabBarViewController : UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
+        navigationItem.hidesBackButton = true
         
         refreshAction(self)
     }
@@ -32,9 +32,11 @@ class TabBarViewController : UITabBarController {
     @IBAction func refreshAction(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.udacityNetworkHelper.getStudentLocations { (success, locations) in
-            if (success) {
-                appDelegate.studentLocations = locations!
+            if success {
+                StudentRepository.sharedInstance.studentLocations = locations!
                 self.refreshChildren()
+            } else {
+                self.showToast(message: "Sorry, could not refresh.")
             }
         }
     }
